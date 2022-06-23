@@ -1,0 +1,8 @@
+{
+  "name": "Healthy Eats",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "d59b092f"
+}

@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Healthy Eats",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
