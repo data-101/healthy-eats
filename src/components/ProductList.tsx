@@ -38,25 +38,16 @@ interface ProductProps {
 }
 
 export const ProductList: React.FC<ProductProps> = ({ products }) => {
-  const itemList = () => {
-    return products.map((product) => (
-      <IonItem>
-        <IonCheckbox slot="end" />
-        <IonIcon icon={product.image} slot="start" />
-        <IonLabel>{product.name}</IonLabel>
-      </IonItem>
-    ));
-  };
 
   return (
     <IonContent>
       {products.map((product) => (
         // <IonCol size="12" size-md="6" key={product.id}>
-        <IonCard key={product.id}>
-          <IonItem>
-            <IonItem slot="start" style={{backgroundColor:"blue"}} routerLink={`/product/${product.id}`}>
-              <IonAvatar>
-                <img src={product.image} alt="Speaker profile pic" />
+        <IonCard key={product.id} style={product.alert ? {borderLeft: "solid 0.6em red"}: {}}>
+          <IonItem >
+            <IonItem slot="start" routerLink={`/product/${product.id}`}>
+              <IonAvatar >
+                <img src={product.image} alt="No Image" />
               </IonAvatar>
             </IonItem>
 

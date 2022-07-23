@@ -26,7 +26,8 @@ const Home: React.FC = () => {
     // if (e.key != 'Enter') {
     //   return;
     // }
-    getProducts(searchText).then(products => setProductList(products));
+    getProducts(searchText).then(products => setProductList([...producList,...products]))
+    setSearchText("");
   };
 
 
@@ -48,7 +49,7 @@ const Home: React.FC = () => {
         <ExploreContainer />
         <div >
           <form onSubmit={filter}>
-        <IonSearchbar inputmode="search" onIonChange={e => setSearchText(e.detail.value!)}></IonSearchbar>
+        <IonSearchbar inputmode="search" value={searchText} onIonChange={e => setSearchText(e.detail.value!)}></IonSearchbar>
         <IonButton expand="block" type="submit">Add</IonButton>
         </form>
         </div>
