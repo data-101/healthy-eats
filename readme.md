@@ -16,7 +16,7 @@ npm install -g @ionic/cli
 ```
 npm i
 ```
-2. The application uses the following API: https://rapidapi.com/edamam/api/recipe-search-and-diet/. We need to generate a key from this page and and stored in the project in a file called secret.json.
+2. The application uses the following API: https://rapidapi.com/edamam/api/recipe-search-and-diet/. We need to generate a key from this page and update this key in src/secret.json.
 ```
 {
     "key": "REPLACE_WITH_KEY_FROM_RAPIDAPI"
