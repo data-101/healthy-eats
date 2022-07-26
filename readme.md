@@ -5,10 +5,10 @@
 2. React
 
 ## Requirements
-1. Node must be installed.
+1. Node must be installed. (https://nodejs.dev/learn/how-to-install-nodejs)
 2. Install Ionic 
 ```
-npm install -g @ionic/cli
+npm install -g @ionic/cli (https://ionicframework.com/docs/intro/cli)
 ```
 
 ## Development Run
@@ -16,14 +16,8 @@ npm install -g @ionic/cli
 ```
 npm i
 ```
-2. The application uses the following API: https://rapidapi.com/edamam/api/recipe-search-and-diet/. We need to generate a key from this page and update this key in src/secret.json.
-```
-{
-    "key": "REPLACE_WITH_KEY_FROM_RAPIDAPI"
-}
-```
-3. Then run the application 
+2. Then run the application 
 ```
 ionic serve
 ```
-4. The application is accessible at: http://localhost:8100/home
+3. The application is accessible at: http://localhost:8100/home
