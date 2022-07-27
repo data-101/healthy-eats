@@ -10,7 +10,7 @@ This application relies on the following tools:
 ## Installing Node
 Installation instructions for Node.js can be found [here.](https://nodejs.dev/learn/how-to-install-nodejs)
 
-## *Healthy Eats* Setup
+## Healthy Eats Setup
 After installing Node.js, install Healthy Eats using the following steps:
 1. Clone the repository or download and unzip the code into a work directory.
 2. Using a command prompt, navigate to the root directory of the project.
@@ -31,7 +31,7 @@ To install dependencies run the following command:
 npm i
 ```
 
-## Starting *Healthy Eats*
+## Starting Healthy Eats
 To start *Healthy Eats* run the following commands:
 ```
 ionic serve
@@ -42,7 +42,7 @@ This command will start a web server and will load the home page for *Healthy Ea
 If the home page is not automatically loaded it can be loaded at:
 http://localhost:8100/home
 
-## Navigating *Healthy Eats*
+## Navigating Healthy Eats
 This is a proof-of-concept version of *Healthy Eats* so some functionality is limited. The following steps can be followed to demo *Healthy Eats*:
 1. In the **Search Bar** at the top of the screen type "Beef"
 2. Press **Add**
