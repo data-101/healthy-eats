@@ -19,7 +19,7 @@ After installing Node.js, install Healthy Eats using the following steps:
 ## Installing Ionic
 To install Ionic, run the following command on the command line:
 ```
-npm install -g @ionic/cli (https://ionicframework.com/docs/intro/cli)
+npm install -g @ionic/cli
 ```
 
 ## Installing Dependencies
