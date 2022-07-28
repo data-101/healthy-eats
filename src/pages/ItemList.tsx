@@ -13,7 +13,6 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-// import { API } from "aws-amplify";
 import { calendar, people } from "ionicons/icons";
 import { useEffect, useState } from "react";
 import ExploreContainer from "../components/ExploreContainer";
@@ -25,19 +24,8 @@ interface Item {
   info: string;
 }
 
-//   let d: Item={id:"1",info:"Hello"}
-//   API
-// .post("groceryItems", "/items", {
-//   body: d, // replace this with attributes you need
-//   headers: {}, // OPTIONAL
-// })
-// .then(response => {
-//   console.log(response)
-// })
-// .catch(error => {
-//   console.log(error.response);
-// });
-
+// This page is supposed to allow users to maintain different lists
+// Work in progress
 const ItemList: React.FC = () => {
   const [itemList, setItemList] = useState<Item[]>([]);
   const [text, setText] = useState<string>();
@@ -47,25 +35,10 @@ const ItemList: React.FC = () => {
   }, []);
 
   const updateData = () => {
-    // API.get("groceryItems", "/items/1", {}).then((res) => setItemList(res));
   };
 
   const addItem = (e: React.FormEvent) => {
     e.preventDefault();
-    // API.post("groceryItems", "/items", {
-    //   body: { id: "1", info: text },
-    //   headers: {},
-    // })
-    //   .then((response) => {
-    //     console.log(response);
-    //     let a: Item = { id: "1", info: text! };
-    //     updateData();
-    //     // setItemList((at) => [...at, a]);
-    //     setText("");
-    //   })
-    //   .catch((error) => {
-    //     console.log(error.response);
-    //   });
   };
 
   return (

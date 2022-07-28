@@ -6,26 +6,22 @@ import { ProductList } from '../components/ProductList';
 import { Product } from '../model/Product';
 import { getProducts } from '../store/ProductStore';
 import './Home.css';
-// import { Auth } from 'aws-amplify';
-// import { DataStore } from "@aws-amplify/datastore";
-// import { API } from 'aws-amplify';
-
 
 
 const Home: React.FC = () => {
+  // Manages state of the main search bar
   const [searchText, setSearchText] = useState('');
+  // Grocery lIst
   const [producList, setProductList] = useState<Product[]>([]);
 
   useEffect(() => {
+    // Get all the products and store it in the product list state that is used to render the grocery list
     getProducts(searchText).then(products => setProductList(products));
-    // DataStore.save(d).then((s)=>console.log(s));
   }, []);
 
   const filter = (event : React.FormEvent) => {
     event.preventDefault();
-    // if (e.key != 'Enter') {
-    //   return;
-    // }
+    // This would try and find the product and merge it to the product list
     getProducts(searchText).then(products => setProductList([...producList,...products]))
     setSearchText("");
   };
@@ -37,7 +33,6 @@ const Home: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle>Healthy Eats</IonTitle>
-          {/* <IonButton slot='end' href='/login'>Sign-in</IonButton> */}
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -55,17 +50,6 @@ const Home: React.FC = () => {
         </div>
         < ProductList products={producList} />
       </IonContent >
-
-      {/* <IonTabBar slot="bottom">
-        <IonTabButton tab="schedule" href="/home">
-          <IonIcon icon={calendar} />
-          <IonLabel>Store</IonLabel>
-        </IonTabButton>
-        <IonTabButton tab="list" href="/list">
-          <IonIcon icon={people} />
-          <IonLabel>List</IonLabel>
-        </IonTabButton>
-      </IonTabBar> */}
     </IonPage >
 
 

@@ -52,6 +52,8 @@ interface ProductPageProp
     id: string;
   }> {}
 
+
+// Presentation layer for individual Items takes the product ID as input from the URL
 const ProductPage: React.FC<ProductPageProp> = ({ match }) => {
   const [showActionSheet, setShowActionSheet] = useState(false);
   const [actionSheetButtons, setActionSheetButtons] = useState<

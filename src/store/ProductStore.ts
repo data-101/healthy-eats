@@ -49,6 +49,8 @@ const productInfo: any = {
   
 };
 
+
+// Query Edaman API for the product and return search results
 export const getProducts = async (
   searchText: string = ""
 ): Promise<Product[]> => {
@@ -113,6 +115,7 @@ export const getProducts = async (
   // });
 };
 
+// Used by the product page for individual product details
 export const getProductById = async (id: string): Promise<Product> => {
   return await fetch(
     `https://edamam-food-and-grocery-database.p.rapidapi.com/parser?ingr=${id}`,

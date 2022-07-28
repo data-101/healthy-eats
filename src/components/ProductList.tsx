@@ -37,6 +37,7 @@ interface ProductProps {
   products: Product[];
 }
 
+// This renders the base list shown in the home screen (The grocery lIst)
 export const ProductList: React.FC<ProductProps> = ({ products }) => {
 
   return (
